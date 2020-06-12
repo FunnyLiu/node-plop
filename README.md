@@ -1,3 +1,52 @@
+
+# 源码分析
+
+## 文件结构
+
+``` bash
+/Users/liufang/openSource/FunnyLiu/node-plop
+├── LICENSE
+├── README.md
+├── build-scripts
+|  └── clean.js
+├── package-lock.json
+├── package.json
+├── plop-templates
+|  └── ava-test.js
+├── plopfile.js
+├── src
+|  ├── actions
+|  |  ├── _common-action-add-file.js
+|  |  ├── _common-action-interface-check.js
+|  |  ├── _common-action-utils.js
+|  |  ├── add.js
+|  |  ├── addMany.js
+|  |  ├── append.js
+|  |  ├── index.js
+|  |  └── modify.js
+|  ├── baked-in-helpers.js
+|  ├── fs-promise-proxy.js
+|  ├── generator-runner.js
+|  ├── index.js
+|  ├── node-plop.js
+|  └── prompt-bypass.js
+
+directory: 54 file: 132
+
+ignored
+
+```
+
+## 外部模块依赖
+
+请在： http://npm.broofa.com?q=node-plop 查看
+
+## 内部模块依赖
+
+![img](./inner.svg)
+  
+
+
 Node-Plop
 ======
 

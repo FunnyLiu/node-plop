@@ -39,6 +39,7 @@ function nodePlop(plopfilePath = '', plopCfg = {}) {
 	const getHelper = name => helpers[name];
 	const getPartial = name => partials[name];
 	const getActionType = name => actionTypes[name];
+	// 获取generator
 	const getGenerator = name => generators[name];
 	function setGenerator(name = '', config = {}) {
 		// if no name is provided, use a default
@@ -174,6 +175,7 @@ function nodePlop(plopfilePath = '', plopCfg = {}) {
 			}
 
 			return Object.assign({}, generator, {
+				//runAction真正执行的内容
 				runActions: (data, hooks) => runner.runGeneratorActions(generator, data, hooks),
 				runPrompts: (bypassArr = []) => runner.runGeneratorPrompts(generator, bypassArr)
 			});
@@ -183,7 +185,7 @@ function nodePlop(plopfilePath = '', plopCfg = {}) {
 			return this.getGenerator(g.name);
 		}
 	});
-
+	// 获取指定的plopfile
 	if (plopfilePath) {
 		plopfilePath = path.resolve(plopfilePath);
 		const plopFileName = path.basename(plopfilePath);

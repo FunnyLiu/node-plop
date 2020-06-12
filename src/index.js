@@ -7,4 +7,5 @@ import nodePlop from './node-plop';
  * @param {object} plopCfg - A config object to be passed into the plopfile when it's executed
  * @returns {object} the node-plop API for the plopfile requested
  */
+// 入口文件
 module.exports = nodePlop;

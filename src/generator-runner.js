@@ -29,6 +29,7 @@ export default function (plopfileApi, flags) {
 	};
 
 	// Run the actions for this generator
+	// 调用runAction真正执行任务
 	const runGeneratorActions = async function (genObject, data={}, hooks={}) {
 		const noop = () => {};
 		const {
@@ -94,6 +95,7 @@ export default function (plopfileApi, flags) {
 
 			try {
 				const actionResult = await executeActionLogic(actionLogic, actionCfg, data);
+				//触发钩子函数
 				onSuccess(actionResult);
 				changes.push(actionResult);
 			} catch(failure) {
